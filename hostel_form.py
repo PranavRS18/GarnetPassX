@@ -5,10 +5,6 @@ import matplotlib.pyplot as plt
 sig = cv2.imread("signature.jpg", cv2.IMREAD_GRAYSCALE)
 form = cv2.imread("hostel_signout_form.jpg", cv2.IMREAD_GRAYSCALE)
 
-def display(img):
-    plt.imshow(img, cmap = "gray")
-    plt.axis(False)
-
 _, sig = cv2.threshold(sig, 200, 255, cv2.THRESH_BINARY)
 aspect_ratio = sig.shape[1] / sig.shape[0]
 
